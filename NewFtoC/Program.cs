@@ -31,7 +31,7 @@ namespace Refactorings
                         string tempCString = s.Substring(0, s.Length - 1);
                         double tempC = System.Convert.ToDouble(tempCString);
                         cTemps.Add(tempC);
-
+                        
                         Console.WriteLine(tempC * (9.0 / 5.0) + 32);
                     }
                 }
@@ -54,7 +54,7 @@ namespace Refactorings
                     Console.WriteLine(MaxTempInF(cTemps));
                     Console.WriteLine(AveCTempInF(cTemps));
                 }
-
+                
                 Console.WriteLine(AllTheCelsiusFormulae(20, 30, 40, 50, 60, 70));
             }
             Console.ReadKey();
@@ -87,7 +87,7 @@ namespace Refactorings
             // directly
             //
 
-            return (fMin - 32) * (5.0 / 9.0);
+            return TemperatureConversions.FtoC(fMin);
         }
         private static double MinTempInF(List<double> cTemps)
         {
@@ -101,7 +101,7 @@ namespace Refactorings
                 }
             }
 
-            return (cMin * 9.0 / 5.0) + 32;
+            return TemperatureConversions.CtoF(cMin);
         }
 
         static double MaxTempInC(List<double> fTemps)
@@ -116,7 +116,7 @@ namespace Refactorings
                 }
             }
 
-            return (fMax - 32) * (5.0 / 9.0);
+            return TemperatureConversions.FtoC(fMax);
         }
         private static double MaxTempInF(List<double> cTemps)
         {
@@ -130,7 +130,7 @@ namespace Refactorings
                 }
             }
 
-            return (cMax * 9.0 / 5.0) + 32;
+            return TemperatureConversions.CtoF(cMax);
         }
 
         static double AveFTempInC(List<double> fTemps)
@@ -144,7 +144,7 @@ namespace Refactorings
             }
             fAve = fTot / fTemps.Count;
 
-            return (fAve - 32) * (5.0 / 9.0);
+            return TemperatureConversions.FtoC(fAve);
         }
 
         static double AveCTempInF(List<double> cTemps)
@@ -158,7 +158,7 @@ namespace Refactorings
             }
             cAve = cTot / cTemps.Count;
 
-            return cAve * (9.0 / 5.0) + 32;
+            return TemperatureConversions.CtoF(cAve);
         }
 
         static double SumTempsInC(List<double> fTemps)
@@ -168,7 +168,7 @@ namespace Refactorings
             {
                 fTotal += f;
             }
-            return (fTotal - 32) * (5.0 / 9.0);
+            return TemperatureConversions.FtoC(fTotal);
         }
 
         static string ListTempsInC(List<double> fTemps)
