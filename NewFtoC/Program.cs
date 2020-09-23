@@ -143,7 +143,7 @@ namespace Refactorings
                 fTot += f;
             }
             fAve = fTot / fTemps.Count;
-            //here
+
             return TemperatureConversions.FtoC(fAve);
         }
 
