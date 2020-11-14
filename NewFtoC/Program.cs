@@ -13,6 +13,9 @@ namespace Refactorings
             List<double> fTemps = new List<double>();
             List<double> cTemps = new List<double>();
 
+            //TASK 0: Using quick find/replace (Ctrl-H), get ready to replace all the instances of s.below with str.
+            //don't make the actual changes, but pause when you're ready to do so.
+
             foreach (string s in args)
             {
                 if (s != null)
@@ -39,14 +42,6 @@ namespace Refactorings
                 {
                     Console.WriteLine(MinTempInC(fTemps));
                     Console.WriteLine(MaxTempInC(fTemps));
-                    //TASK 1: 
-                    //On line 49 below
-                    //write the result of AveFTempInC() method operating on the list of fTemps, to the console
-                    //Follow the same pattern as in the lines of code above this comment (40,41)
-                    //PLEASE THINK OUT LOUD, 
-                    //Tell us what you are doing on the keyboard and mouse, and what you're seeing onscreen
-                    //Is what you are seeing helping/hindering you in your task?
-
                 }
                 if (cTemps.Count != 0)
                 {
@@ -60,6 +55,11 @@ namespace Refactorings
             Console.ReadKey();
         }
 
+        //TASK 2 start:
+        // change all the functions in this file that are written in terms of doubles to use decimals instead
+        // e.g. static double MinTempInC(List<double> fTemps) => static decimal MinTempInC(List<decimal> fTemps)
+        // there are multiple functions that take this form in the file - is there a quick way to change the method signatures?
+
         static double MinTempInC(List<double> fTemps)
         {
             double fMin = fTemps.ElementAt<double>(0);
@@ -71,7 +71,8 @@ namespace Refactorings
                     fMin = f;
                 }
             }
-            // TASK 2 Start: Change the hardcoded Fahrenheit to Celsius conversion below  
+            // TASK 1 Start:
+            // Change the hardcoded Fahrenheit to Celsius conversion below  
             // to use FtoC(double fahrenheitTemp) function instead, throughout this file.
             // 
             // For instance, the line below 
