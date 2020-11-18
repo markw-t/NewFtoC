@@ -55,7 +55,7 @@ namespace Refactorings
             Console.ReadKey();
         }
 
-        //TASK 2 start:
+        //TASK 1 start:
         // change all the functions in this file that are written in terms of doubles to use decimals instead
         // e.g. static double MinTempInC(List<double> fTemps) => static decimal MinTempInC(List<decimal> fTemps)
         // there are multiple functions that take this form in the file - is there a quick way to change the method signatures?
@@ -71,7 +71,7 @@ namespace Refactorings
                     fMin = f;
                 }
             }
-            // TASK 1 Start:
+            // TASK 2 Start:
             // Change the hardcoded Fahrenheit to Celsius conversion below  
             // to use FtoC(double fahrenheitTemp) function instead, throughout this file.
             // 
