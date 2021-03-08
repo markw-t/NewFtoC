@@ -107,6 +107,8 @@ namespace Refactorings
 
         static double MaxTempInC(List<double> fTemps)
         {
+            //TASK 3: replace lines like
+            //list.ElementAt<double>(0) as shown in next line, with list[0], ONLY if the list in question is fTemps
             double fMax = fTemps.ElementAt<double>(0);
 
             foreach (double f in fTemps)
