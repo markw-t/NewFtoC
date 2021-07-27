@@ -158,7 +158,7 @@ namespace Refactorings
             }
             cAve = cTot / cTemps.Count;
 
-            return cAve * (9.0 / 5.0) + 32;
+            return (cAve * 9.0 / 5.0) + 32;
         }
 
         static double SumTempsInC(List<double> fTemps)
